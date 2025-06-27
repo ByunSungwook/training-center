@@ -1,0 +1,1 @@
+export const wregexp = (q: string) => new RegExp([...q.replace(/\s/g, '')].join('\\s*'), 'i');

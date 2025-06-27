@@ -1,0 +1,28 @@
+type Query {
+  getDocumentsByTarget(targetType: String!, targetId: String!): [Document]
+  getDocumentsCountByTarget(targetType: String!, targetId: String!): Int
+}
+
+type Mutation {
+  createDocument(
+    targetType: String!
+    targetId: String!
+    authorId: String!
+    content: String!
+    timestamp: DateTime!
+  ): Document!
+  updateDocument(id: ID!, content: String!): Document!
+  deleteDocumentByUser(id: ID!): Document!
+  deleteDocumentByAdmin(id: ID!): Document!
+}
+
+type Document {
+  id: ID!
+  authorId: ID!
+  targetType: String!
+  targetId: String!
+  content: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  deletedAt: DateTime
+}

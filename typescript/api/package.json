@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "check-types": "tsc -p tsconfig.json --noEmit",
+    "dev": "npx tsx watch src/boot.ts",
+    "dev-no-watch": "npx tsx src/boot.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
